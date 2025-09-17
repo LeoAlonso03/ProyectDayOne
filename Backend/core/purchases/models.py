@@ -12,7 +12,8 @@ class Purchase(models.Model):
     total = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
-        return f"Compra {self.uuid} - Total: ${self.total}"  # ✅ Devuelve string
+        return f"{self.total} - {self.cliente_uuid.nombre_cliente}" # ✅ Devuelve string
+
 
         
 
